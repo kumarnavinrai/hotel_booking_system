@@ -59,3 +59,66 @@ The system has 4 main layers:
 - Download the project and open the solution file `HotelBooking.sln`.
 - Run the migration in Infrastructure layer to update the database.
 - The system has an admin that's seeded into the database using seeding migration, the credentials are: Username: `admin`, Password: `admin123`.
+
+
+NORMAL PROJECT FOLDER STRUCTURE
+
+MyProject/
+│
+├── Controllers/          # Controllers handle HTTP requests/responses
+│   ├── ProductsController.cs
+│   ├── UsersController.cs
+│
+├── Models/               # Entity models (represent database tables)
+│   ├── Product.cs
+│   ├── User.cs
+│
+├── DTOs/                 # Data Transfer Objects for input/output mapping
+│   ├── ProductDto.cs
+│   ├── UserDto.cs
+│
+├── Interfaces/           # Interfaces for repositories and services
+│   ├── IProductRepository.cs
+│   ├── IUserRepository.cs
+│   ├── IProductService.cs
+│   ├── IUserService.cs
+│
+├── Repositories/         # Repository implementations for data access
+│   ├── ProductRepository.cs
+│   ├── UserRepository.cs
+│
+├── Services/             # Business logic and service layer
+│   ├── ProductService.cs
+│   ├── UserService.cs
+│
+├── Data/                 # Database-related files
+│   ├── AppDbContext.cs   # EF Core DbContext configuration
+│   ├── Migrations/       # Migration files for database schema updates
+│
+├── Helpers/              # Utility classes and helpers
+│   ├── JwtHelper.cs
+│   ├── ValidationHelper.cs
+│
+├── Middleware/           # Custom middleware components
+│   ├── ExceptionMiddleware.cs
+│
+├── Config/               # Configuration-related files
+│   ├── AppSettings.json  # Application settings and secrets
+│   ├── LoggingConfig.cs
+│
+├── wwwroot/              # Static files (optional, for web apps)
+│   ├── images/
+│   ├── css/
+│
+├── Tests/                # Unit and integration tests
+│   ├── Controllers/      # Test controllers
+│   │   ├── ProductsControllerTests.cs
+│   ├── Services/         # Test services
+│   │   ├── ProductServiceTests.cs
+│   ├── Repositories/     # Test repositories
+│       ├── ProductRepositoryTests.cs
+│
+├── Program.cs            # Entry point for the application
+├── Startup.cs            # Configures services and the app pipeline
+├── MyProject.sln         # Solution file for the project
+

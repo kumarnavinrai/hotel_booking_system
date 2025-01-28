@@ -62,7 +62,9 @@ The system has 4 main layers:
 
 
 NORMAL PROJECT FOLDER STRUCTURE
+## Project Folder Structure
 
+```plaintext
 MyProject/
 │
 ├── Controllers/          # Controllers handle HTTP requests/responses
@@ -121,4 +123,3 @@ MyProject/
 ├── Program.cs            # Entry point for the application
 ├── Startup.cs            # Configures services and the app pipeline
 ├── MyProject.sln         # Solution file for the project
-
